@@ -6,7 +6,7 @@ export const About = () => {
       <div className="container">
         <h2>About Me</h2>
         <p>
-            Hi, I’m Ralph Njuguna — a web developer in Nairobi specialising in building fast, mobile-friendly websites that help businesses attract and convert customers online.
+            Hi, I’m Ralph Njuguna — a web developer in Nairobi specialising in building fast, mobile-friendly websites that help businesses attract and convert customers online!
         </p>
       </div>
     </section>
