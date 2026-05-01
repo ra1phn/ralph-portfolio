@@ -11,6 +11,7 @@ import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { Pricing } from "./components/Pricing";
 import { FAQ } from "./components/FAQ";
 import { ContactForm } from "./components/ContactForm";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
