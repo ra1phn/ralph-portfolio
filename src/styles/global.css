@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-padding {
+  padding: 80px 20px;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  color: #2a4d69;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2a4d69;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #2a4d69;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #2a4d69;
+  border: 1px solid #2a4d69;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  color: #2a4d69;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2a4d69;
+}
+
+.nav-cta {
+  font-size: 0.9rem;
+}
+
+/* HERO IMPROVEMENT */
+.hero {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+/* GRID ENHANCEMENT */
+.grid {
+  margin-top: 30px;
+}
+
+/* CARD HOVER EFFECT */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  background: #2a4d69;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.cta h2 {
+  color: #fff;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer h3 {
+  color: #fff;
+}
+
+/* TRUST BAR */
+.trust {
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.trust-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+/* TRUST TEXT */
+.trust-text {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  background: #25D366; /* WhatsApp green */
+  color: #fff;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+/* Optional: subtle glow for emphasis */
+.btn-whatsapp {
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 5s forwards, pulse 2s infinite 5.5s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* FADE IN ANIMATION */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* PRICING */
+.pricing-grid {
+  margin-top: 40px;
+}
+
+.pricing-card {
+  text-align: center;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.pricing-card li {
+  margin: 10px 0;
+}
+
+/* FEATURED PLAN */
+.featured {
+  border: 2px solid #2a4d69;
+  transform: scale(1.05);
+}
+
+/* pricing badge */
+.badge {
+  background: #2a4d69;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* highlight card */
+.featured {
+  border: 2px solid #2a4d69;
+  transform: scale(1.05);
+}
+
+/* pricing note */
+.pricing-note {
+  text-align: center;
+  margin-top: 30px;
+  color: #555;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
