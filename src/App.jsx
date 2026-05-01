@@ -11,7 +11,8 @@ import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { Pricing } from "./components/Pricing";
 import { FAQ } from "./components/FAQ";
 import { ContactForm } from "./components/ContactForm";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
       <CTA />
       <Footer />
       <FloatingWhatsApp />
+      <Analytics />
+      <SpeedInsights />
 
     </>
   );
