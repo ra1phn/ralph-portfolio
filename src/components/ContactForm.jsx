@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 export const ContactForm = () => {
   const [form, setForm] = useState({
@@ -11,13 +13,24 @@ export const ContactForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    alert("Message sent! I’ll get back to you soon.");
+  try {
+    await addDoc(collection(db, "leads"), {
+      name: form.name,
+      email: form.email,
+      message: form.message,
+      createdAt: new Date(),
+    });
+
+    alert("Message sent successfully!");
 
     setForm({ name: "", email: "", message: "" });
-  };
+  } catch (error) {
+    console.error("Error adding document: ", error);
+  }
+};
 
   return (
     <section id="contact" className="section-padding">
