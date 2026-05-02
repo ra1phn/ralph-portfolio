@@ -16,19 +16,21 @@ export const ContactForm = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
 
+  // simple spam protection
+  if (form.message.length < 5) return;
+
   try {
     await addDoc(collection(db, "leads"), {
       name: form.name,
       email: form.email,
       message: form.message,
-      createdAt: new Date(),
+      createdAt: new Date().toISOString(),
+      source: "portfolio"
     });
 
-    alert("Message sent successfully!");
-
-    setForm({ name: "", email: "", message: "" });
+    alert("Message sent!");
   } catch (error) {
-    console.error("Error adding document: ", error);
+    console.error(error);
   }
 };
 
